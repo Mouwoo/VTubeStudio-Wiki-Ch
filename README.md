@@ -1,0 +1,1 @@
+VTubeStudio wiki的中文翻译版本，为方便国内浏览制作成MkDocs独立部署。

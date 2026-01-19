@@ -1,0 +1,79 @@
+VTube Studio 具有内置的画面后期处理功能，允许你直接将 **“视觉特效”** 添加到场景中。这适用于 **Windows** 和 **macOS** 。有些效果适用于 [透明推流](Recording-Streaming-with-OBS.md) ，而另一些效果不适用。
+
+你可以组合效果、保存效果预设并通过快捷键加载或切换预设。
+
+<br/>
+
+:warning: :warning: :warning: **警告！一些画师和建模师对某些滤镜表示担忧，这些滤镜大多与以一些方式扭曲模型的滤镜有关。在使用这些滤镜之前，建议获得模型制作者的许可，以防止将来与他们产生任何潜在的分歧。** :warning: :warning: :warning:
+
+<br/>
+
+<p float="left">
+  <img src="img/img/eff_turn_on.gif" width="290" /> 
+  <img src="img/img/eff_lens.gif" width="290" /> 
+  <img src="img/img/eff_outline.gif" width="290" /> 
+</p>
+
+<p float="left">
+  <img src="img/img/eff_particle.gif" width="290" /> 
+  <img src="img/img/eff_pixel_various.gif" width="290" /> 
+  <img src="img/img/eff_eyes_b.gif" width="290" /> 
+</p>
+
+效果包括镜头畸变、光晕、粒子、叠加、各种灯光效果等等。你可以根据需要配置和组合这些效果，然后将配置保存为 **VFX预设** ，可以随时使用快捷键加载。
+
+[[img/img/hint_top.png]]
+[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+一些特殊的效果可能会需要更多显卡占用，并且可能无法在较旧的电脑上顺利运行。如果你想结合多个效果，你可能需要一张强大的显卡。
+
+[[img/img/hint_bottom.png]]
+
+## 配置效果
+
+如果你想使用 **效果** ，请确保首先使用此开关全局打开它们。当你 **关闭** 此功能时，所有效果都将被 **禁用** 。
+
+[[img/img/effects_main_window.png]]
+
+使用 **“选择的效果”** 按钮查看所有可用效果的列表。
+
+[[img/img/effects_selection_list_1.png]]
+
+在这里，你可以选择列表中的任何效果来打开/关闭它并设置其配置值。该列表还将显示当前启用的效果。
+
+## 效果预设和效果快捷键
+
+打开并配置一些效果后，你可以使用保存按钮将该效果系统状态保存到 **“效果预设”** 中。然后，该预设将作为文件保存在 `StreamingAssets\Effects` 文件夹中（文件的扩展名为 `.effects.json` ）。使用加载按钮，你可以加载任何以前创建的预设。
+
+预设不会被绑定到特定的 VTube Studio 模型，但你可以在模型中设置 **快捷键** 来预设或效果的配置值之间切换。所有效果和效果配置值均已设置，因此使用快捷键时，预设之间的切换将在效果之间 **平滑地淡入淡出** 。
+
+[[img/img/effects_hotkey_1.png]]
+
+## 效果和透明推流
+
+一些效果，如镜头失真、天气效果等，可以与透明度完美配合，因此可以通过 Spout2/游戏采集等推流方式获得效果不错的 [透明推流](Recording-Streaming-with-OBS.md) 。
+
+但其他一些效果（例如发光粒子效果）将无法正常工作。如果你想正确使用这些效果，你的直播背景必须位于 **VTube Studio 中** 。VTube Studio 不仅支持 **.png** 和 **.jpg** 背景，还支持 **.mp4** 视频，因此你可以直接在 VTube Studio 中设置动画背景，甚至可以使用 **“更改背景”快捷键** 在背景之间切换。
+
+除此之外，VTube Studio 还支持 **[Spout2背景](Spout2-Background.md)** ，允许你将任何 Spout2 源设置为 VTube Studio 中的背景。比如 OBS 输出的 Spout2 源。
+
+## 效果和挂件固定
+
+有些效果会扭曲模型的外观。挂件基于鼠标光标位置固定，因此当模型扭曲时，它实际上并不在看起来的位置，并且手动很难把挂件固定在预期位置。不过，挂件场景快捷键仍然有效。
+
+[[img/img/effects_wave.png]]
+
+
+## 效果和 VNet
+
+效果当前 **不会** 通过 [VNet](Multiplayer.md) 同步。这意味着如果你激活自己这边的效果，另一边的人将看不到它们。他们可以激活自己的效果。
+
+
+## 实验效果
+
+一些画师和建模师对某些滤镜表示担忧，这些滤镜大多与以一些方式扭曲模型的滤镜有关。
+
+一些实验效果会以画师和建模师意想不到的方式移动单个模型层，并可能展示模型的隐藏部分。未经模型制作者的明确许可，不应使用这些效果。
+
+默认情况下，这些效果处于禁用状态，并且不会在效果列表中列出。要启用它们，请在一般视觉特效配置中打开 **“利用实验效果”**，如下所示：
+
+[[img/img/warning_experimental_effects.jpg]]

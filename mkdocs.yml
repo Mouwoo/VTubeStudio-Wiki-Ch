@@ -1,0 +1,117 @@
+site_name: VTS 手册
+
+theme:
+  name: material
+  language: zh  # 侧边栏及控件汉化，提升易用性
+  logo: img/logo/vts_logo_transparent.png  # 侧边栏顶部 LOGO（保留原有路径）
+  favicon: img/logo/vts_logo_transparent.png  # 浏览器标签页图标（保留原有路径）
+  # 启用所有要求的酷炫功能（逐一对应，无遗漏）
+  features:
+    - navigation.sidebar  # 强制启用侧边栏
+    - navigation.expand   # 侧边栏默认展开（带平滑动画）
+    - navigation.indexes  # 侧边栏索引优化
+    - navigation.path     # 侧边栏显示当前路径（面包屑）
+    - navigation.tracking # 侧边栏跟随页面滚动高亮当前项
+    - search.suggest      # 侧边栏搜索联想
+    - search.highlight    # 搜索结果高亮
+    - toc.follow          # 右侧目录跟随滚动（配合侧边栏更易用）
+    - content.code.copy   # 代码块复制按钮（额外酷炫功能）
+  # 可选：配置暗黑/浅色模式（增强酷炫感，不影响核心功能）
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至暗黑模式
+    - scheme: slate
+      primary: deep purple
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: 切换至浅色模式
+
+# 插件配置：仅保留必要插件，无无效配置（避免报错）
+plugins:
+  - search  # 原生搜索插件（支撑 search.suggest / search.highlight 功能）
+
+# 核心：保留原有侧边栏完整内容（导航结构与之前一致，无删减）
+nav:
+  - 首页: index.md
+  - 插件: Plugins.md
+  - 联系方式:
+    - Discord: https://discord.gg/VTubeStudio
+    - 推特: https://twitter.com/VTubeStudio
+    - 官方网站: https://Denchisoft.com
+    - 邮箱: mailto:denchi@denchisoft.com
+  - VTS 简介:
+    - Android vs. iPhone vs. 网络摄像头: Android-vs.-iPhone-vs.-Webcam.md
+    - 入门指南: Getting-Started.md
+    - 简介&必要环境: Introduction-&-Requirements.md
+    - 载入自定义模型: Loading-your-own-Models.md
+    - 哪里可以获得模型？: Models.md
+    - 恢复旧的 VTS 版本: Restore-old-VTS-Versions.md
+  - 教程:
+    - 多模型控制: Controlling-multiple-models-with-one-Webcam-or-iPhone-Android-device.md
+    - 模型配置复制: Copy-config-between-models.md
+    - 自定义背景载入: Loading-your-own-Backgrounds.md
+    - 模型&挂件重着色: Recoloring-Models-and-Items.md
+    - 动画录制: Record-Animations.md
+    - OBS 录制/串流: Recording-Streaming-with-OBS.md
+    - 数据传输至 VSeeFace: Sending-data-to-VSeeFace.md
+    - 管理员身份启动: Starting-as-Admin.md
+    - 非 Steam 启动: Starting-without-Steam.md
+    - Mac/PC 推流: Streaming-to-Mac-PC.md
+    - 多人联机: Multiplayer.md
+    - Steam 创意工坊: Workshop.md
+    - 截图与分享: Taking-Sharing-Screenshots.md
+    - Live2D Cubism 编辑器通信: Live2D-Cubism-Editor-Communication.md
+  - 帮助和故障排除:
+    - 延迟问题: Lag-Troubleshooting.md
+    - 连接问题: Connection-Issues-&-Troubleshooting.md
+    - 网络摄像头问题: Webcam-Troubleshooting.md
+    - 崩溃问题: VTS-Crash-Issue-0xC0000005.md
+    - 已知问题: Known-Issues.md
+    - 常见问题: FAQ.md
+  - VTS 设置和功能:
+    - VTube Studio 设置: VTube-Studio-Settings.md
+    - VTS 模型设置: VTS-Model-Settings.md
+    - VTS 模型文件: VTube-Studio-Model-File.md
+    - 视觉特效: Visual-Effects.md
+    - Twitch 互动: Twitch-Interaction.md
+    - Twitch 热键触发器: Twitch-Hotkey-Triggers.md
+    - Spout2 背景: Spout2-Background.md
+    - 按键表情: Expressions-(a.k.a.-Stickers-or-Emotes).md
+    - 动画: Animations.md
+    - 动画与追踪等交互: Interaction-between-Animations,-Tracking,-Physics,-etc..md
+    - Mediapipe 面部捕捉: Mediapipe-Webcam-Tracker.md
+    - NVIDIA 面部捕捉: NVIDIA-Webcam-Tracker.md
+    - Tobii 眼球追踪: Tobii-Eye-Tracker.md
+    - 手部追踪: Hand-Tracking.md
+    - 音频口型同步: Lipsync.md
+    - 挂件系统: Item-System.md
+    - Live2D 挂件: Live2D-Items.md
+    - 层间挂件固定: Between-Layer-Item-Pinning.md
+    - 挂件场景&热键: Item-Scenes-and-Item-Hotkeys.md
+    - 特殊 ArtMesh 功能: Add-Special-ArtMesh-Functionality.md
+    - 屏幕光源着色: Display-Light-Overlay.md
+    - VNet 网络安全: VNet-Security.md
+    - 平台插件: Plugins.md
+    - Web 挂件: Web-Items.md
+    - Web 挂件 UUID 监听: Web-Item-‐-Item-UUID-Listener.md
+  - 杂项:
+    - 隐私政策&许可: Privacy-Policy,-Licensing-and-Further-Terms.md
+    - 漏洞赏金: Bug-Bounty-Program.md
+  - 隐藏彩蛋: _Secret-Page.md
+
+# 文档与站点目录配置（保留原有结构，确保文件路径正确）
+docs_dir: docs  # 你的 .md 文档存放目录（需将所有文件放入此目录）
+site_dir: site  # 构建后的静态站点输出目录（无需修改）
+
+# Markdown 扩展配置（支撑图片样式、锚点等功能，兼容原有内容）
+markdown_extensions:
+  - toc:
+      permalink: true  # 文档内目录锚点链接
+      toc_depth: 2     # 目录深度与侧边栏层级匹配
+  - attr_list  # 支持图片宽高属性（兼容原有图片样式配置）
+  - md_in_html # 支持 HTML 标签内嵌套 Markdown（兼容原有特殊格式）
