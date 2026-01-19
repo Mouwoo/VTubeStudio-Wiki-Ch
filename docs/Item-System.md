@@ -18,11 +18,8 @@
 
 我们建议，但不要求动态挂件的所有帧保持在同一尺寸，“碰撞箱”（挂件的可点击部分）将以动态挂件的第一帧为准。
 
-
-<p float="left">
-  <img src="img/img/item_selection_list.jpg" width="394" /> 
-  <img src="img/img/item_setup.jpg" width="394" /> 
-</p>
+![挂件选择列表与设置界面](img/img/item_selection_list.jpg){: height="" width="394px"}
+![挂件选择列表与设置界面](img/img/item_setup.jpg){: height="" width="394px"}
 
 首先，选择你想要添加的挂件，然后选择顺序。顺序较高的物品将排在顺序较低的挂件前。Live2D模型本身的顺序为0，所以你也可以将挂件排于其后。
 
@@ -36,21 +33,17 @@
 
 此外，你也可以将GIF作为动画挂件，但建议使用PNG组以获得最佳效果（GIF可能会有颗粒感）。
 
-
-<p float="left">
-  <img src="img/img/item_main.jpg" width="290" /> 
-  <img src="img/img/item_lock.jpg" width="290" /> 
-  <img src="img/img/item_delete.jpg" width="290" /> 
-</p>
+![挂件操作演示界面](img/img/item_main.jpg){: height="" width="290px"}
+![挂件操作演示界面](img/img/item_lock.jpg){: height="" width="290px"}
+![挂件操作演示界面](img/img/item_delete.jpg){: height="" width="290px"}
 
 一旦把挂件加入场景，你就可以用PC/Mac和iOS/Android上与模型相同的控制方式来对它进行移动/缩放/旋转。若是想将一件挂件与模型绑定，把它丢到模型上即可。
 
-
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+![顶部提示图标](img/img/hint_top.png)
+![重点提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
 挂件会附着在放置处模型的最上层ArtMesh上，连接点是 **挂件图片的中心**。这有时会让绑定到正确的ArtMesh变得有些困难，所以你需要花点力气才能让它正常运作。
 
-[[img/img/hint_bottom.png]]
+![底部提示图标](img/img/hint_bottom.png)
 
 挂件位置摆放完毕后，你可以 **双击它以锁定位置**。在这种情况下，你无法再移动、缩放或旋转该挂件，直到它被再次解锁。如果该挂件与你的模型绑定，它仍然会跟随模型移动。
 
@@ -62,11 +55,11 @@
 
 你可以使用 `[Ctrl] + 点击` 来翻转它们 (仅未锁定时)。
 
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+![顶部提示图标](img/img/hint_top.png)
+![重点提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
 大多数免费包含的物品/挂件均由 Twitter 上的 **@catboymech** 和 **@7MDigital** 提供。他们还有许多其他很棒的VTuber素材，所以请务必关注并感谢他们！/<3
 
-[[img/img/hint_bottom.png]]
+![底部提示图标](img/img/hint_bottom.png)
 
 ## 使用Live2D模型作为挂件
 
@@ -78,11 +71,8 @@
 
 你可以拖入PNG、JPG、GIF与带有PNG帧的文件夹，它们将被以动态挂件形式导入。在Windows端，你也可以同时拖入多个文件，挂件将以拖入顺序从后往前摆放，仍需遵循最大挂件数限制。
 
-[[img/img/drag_and_drop.png]]
+![挂件拖拽功能演示图](img/img/drag_and_drop.png)
 
 ## 从挂件固定中排除 ArtMeshes
 
 你可以从项目固定中排除 ArtMeshes（模型的一部分，基本上是基础 PSD 的图层）。你可能想要对腮红、效果等叠加层执行此操作。你还可以选择 ArtMeshes，删除掉在其上的任何项目。有关更多信息，请查看 " [添加特殊的ArtMesh功能](Add-Special-ArtMesh-Functionality.md) " 页面。
-
-
-

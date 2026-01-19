@@ -9,9 +9,13 @@ VTube Studio 允许你使用 **Steam 创意工坊** 上传和下载内容。
 只要你遵守以下规则，你就可以在 VTube Studio Steam 创意工坊上分享任何内容:
 
 * 请勿分享不允许分享的内容。仅分享你自己制作的东西或创作者明确允许你分享的东西。
+
 * 请勿分享受版权保护的内容。
+
 * 请勿重新分享你从创意工坊下载的任何内容。
+
 * 请勿使用误导性的预览图标。图标不应歪曲实际内容。
+
 * 请勿分享任何色情内容或包含露骨裸露的内容。如果它无法在 Twitch 上显示，请不要将其上传到创意工坊。
 
 如果你的内容违反了这些规则，可能会被禁止使用创意工坊。
@@ -24,22 +28,21 @@ VTube Studio 允许你使用 **Steam 创意工坊** 上传和下载内容。
 
 如果要共享模型，请 **确保该模型当前已加载** 。如果要共享某个挂件，请 **确保已加载该挂件**（仅加载该挂件，不加载其他挂件）。
 
-[[img/img/workshop_vts_1.png]]
+![创意工坊共享操作界面1](img/img/workshop_vts_1.png)
 
 共享挂件时，你可以提供画师信息。对于模型，你可以提供建模师和画师的信息。在 VTube Studio 的创意工坊搜索中查看内容时，它们都会显示。
 
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+![提示顶部图标](img/img/hint_top.png)
+![Important Point提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
 如果你在 `Artist` 和/或 `Modeler` 字段中输入 **有效的 Twitter URL** (如 https://twitter.com/YourName )，它将显示为可点击的 Twitter 链接 (如 `@YourName` ) 供在 VTube Studio 中浏览创意工坊的人们使用。
 
-[[img/img/hint_bottom.png]]
-
+![提示底部图标](img/img/hint_bottom.png)
 
 你还必须添加一个图标。图标必须是正方形，至少有 200*200 像素，文件大小小于 1 MB。 VTS 会自动生成挂件的图标，但你也可以通过单击图标并选择不同的文件来更改图标。对于挂件，可以使用 **“WorkshopPreviews”** 中的文件，对于模型，可以使用模型文件夹中的文件（PNG 或 JPG）。
 
 如果你希望人们在使用你的内容时始终信任你，请通过相应地设置开关来表明这一点。所有这些数据都可以在以后通过更新创意工坊内容来更改。
 
-[[img/img/workshop_vts_2.png]]
+![创意工坊共享操作界面2](img/img/workshop_vts_2.png)
 
 在上传开始之前，你将看到将要上传的文件列表。请 _仔细_ 查看该列表，以确保其中没有你不想上传的内容。VTube Studio 不会上传任何模型/挂件工作不需要的不相关文件（如 .pdf 等）。
 
@@ -47,7 +50,7 @@ VTube Studio 允许你使用 **Steam 创意工坊** 上传和下载内容。
 
 单击“确定”后，将开始上传。
 
-[[img/img/workshop_vts_3.png]]
+![创意工坊上传进度界面](img/img/workshop_vts_3.png)
 
 上传后，最多可能需要 5 分钟（通常需要大约 2 分钟）才能在 VTS 的创意工坊中搜索到内容。你还可以通过在浏览器中打开 Steam 创意工坊页面并添加它们，为创意工坊内容添加额外的预览图片。这些额外的预览图像也将在 VTube Studio 中可见。
 
@@ -65,22 +68,27 @@ VTube Studio 允许你使用 **Steam 创意工坊** 上传和下载内容。
 
 还可以选择仅搜索“已认证”的创意工坊内容。此内容由制作高质量 VTuber 素材的人上传，可以被视为适合直播。
 
-[[img/img/workshop_vts_4.png]]
+![创意工坊搜索过滤界面](img/img/workshop_vts_4.png)
 
 搜索结果将显示在列表中。你可以直接从该列表中对挂件进行点赞或点踩。
 
-[[img/img/workshop_vts_5.png]]
+![创意工坊搜索结果列表](img/img/workshop_vts_5.png)
 
 下载模型和挂件后，它们将保存到正常的“Live2DModels”和“Items”文件夹中。当你下载 Steam 创意工坊上的内容时，VTube Studio 还会自动订阅这些内容，以跟踪你下载的内容。但是，VTube Studio 永远不会自动更新任何下载的内容。如果上传者更新了挂件/模型，你必须手动重新下载它们才能获取更新。
 
 下载的内容将遵循特殊的命名模式，将其标识为创意工坊内容并防止具有相同名称的挂件/模型相互覆盖:
 
 * **模型**
-  * `<原模型文件名>`**\_workshop\_**`<创意工坊id>`
-  * 示例: 如果原模型文件名是 `my_model`, 它会变成 `my_model_workshop_1234567`, 末尾的数字是其创意工坊ID
+
+  `<原模型文件名>`**\_workshop\_**`<创意工坊id>`
+
+  示例: 如果原模型文件名是 `my_model`, 它会变成 `my_model_workshop_1234567`, 末尾的数字是其创意工坊ID
+
 * **挂件**
-  * **workshop\_**`<创意工坊id>`**_**`<原挂件文件名>`
-  * 示例: 如果原挂件文件名是 `my_item.png`, 它会变成 `workshop_7654321_my_item.png`, 末尾的数字是其创意工坊ID
+
+  **workshop\_**`<创意工坊id>`**_**`<原挂件文件名>`
+
+  示例: 如果原挂件文件名是 `my_item.png`, 它会变成 `workshop_7654321_my_item.png`, 末尾的数字是其创意工坊ID
 
 ## 将创意工坊中的随机物品下载到场景中
 
@@ -94,8 +102,4 @@ VTube Studio 允许你使用 **Steam 创意工坊** 上传和下载内容。
 
 **重要提示: 如果你是Live2D建模师，为了安全起见，我建议你确保你发送给客户的模型的“禁用创意工坊分享”是开启的。**
 
-[[img/img/workshop_vts_6.png]]
-
-
-
-
+![创意工坊模型共享安全设置](img/img/workshop_vts_6.png)

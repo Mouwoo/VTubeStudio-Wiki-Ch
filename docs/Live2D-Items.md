@@ -8,9 +8,7 @@
 
 例如，你可以拥有动态帽子、根据你的面部角度瞄准的枪，并在你点击鼠标时进行射击，或者可以跟随你的头部适当旋转的眼镜。 Live2D 挂件也支持物理。
 
-<p align="center">
-  <img src="img/img/pudding_head_gif.gif" />
-</p>
+![布丁头Live2D挂件演示动图](img/img/pudding_head_gif.gif)
 
 如果设置正确，当它们连接到你的模型并且你的模型移动它们时，它们的物理设置也会做出反应。
 
@@ -24,7 +22,7 @@
 
 要翻转已加载到场景中的挂件，你可以 **[CTRL] + 单击**它。
 
-[[img/img/live2d_items_select.png]]
+![Live2D挂件选择界面](img/img/live2d_items_select.png)
 
 ## 如何配置/微调 Live2D 挂件？例如，头部旋转范围（X/Y 角度）不适合我的模型。我该怎么办？
 
@@ -38,14 +36,14 @@
 
 最后，你可以调整 **“模型拖动物理演算”**。拖动物理场将在拖动或移动挂件时向左/向右推送物理场输入，因为它附属于主模型。
 
-[[img/img/configure_item_live2d.png]]
+![Live2D挂件配置界面](img/img/configure_item_live2d.png)
 
-[[img/img/live2d_items_adjust_params_with_button.png]]
+![Live2D挂件参数调整按钮界面](img/img/live2d_items_adjust_params_with_button.png)
 
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+![顶部提示图标](img/img/hint_top.png)
+![重点提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
 模型拖动物理演算也可以用于普通的 VTube Studio 模型。你可以在其物理设置选项卡中进行设置。
-[[img/img/hint_bottom.png]]
+![底部提示图标](img/img/hint_bottom.png)
 
 ## 如何触发 Live2D 挂件中的快捷键？
 
@@ -58,22 +56,23 @@
 你可以通过主模型的快捷键触发Live2D挂件中已设置的快捷键。只有满足以下要求的快捷键才能通过这种方式触发：
 
 1. 快捷键动作必须是 **"切换按键表情"**, **"移除所有按键表情"** 或 **"更改待机动画"**
+
 2. 快捷键必须有一个名称，名称不能为空。
 
 你可以在 **"Live2D挂件动作"** 的快捷键动作中设置快捷键:
 
-[[img/img/live2d_items_action_hotkey_1.png]]
+![Live2D挂件动作快捷键设置界面1](img/img/live2d_items_action_hotkey_1.png)
 
 当你设置该类型的快捷键时，它将显示所有 Live2D 挂件中的所有快捷键的列表。因此，当你触发该快捷键时，它将触发所选挂件中的所选快捷键（仅当它已加载时）。
 
 如果你加载了同一个 Live2D 挂件的多个实例，这将触发所有实例中的快捷键。
 
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+![顶部提示图标](img/img/hint_top.png)
+![重点提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
 与普通挂件一样，Live2D 挂件可以通过 **“切换挂件场景”** 快捷键加载/卸载。
-[[img/img/hint_bottom.png]]
+![底部提示图标](img/img/hint_bottom.png)
 
-[[img/img/live2d_items_action_hotkey_2.png]]
+![Live2D挂件动作快捷键设置界面2](img/img/live2d_items_action_hotkey_2.png)
 
 或者，你也可以选择 **“上次点击的Live2D挂件快捷键 1/2/3/4”** 选项。使用此快捷键可让你触发上次单击的加载/单击的 Live2D 挂件中的第 X 个（支持的）快捷键。
 
@@ -85,23 +84,22 @@
 
 为此，使用 **“配置/微调 Live2D 挂件”** 按钮加载要重新着色的 Live2D 挂件。按下 **“是”** 后，你将看到以下提示：
 
-[[img/img/live2d_item_recolor_yes_no.png]]
+![Live2D挂件重新着色确认提示界面](img/img/live2d_item_recolor_yes_no.png)
 
 从那里，你现在可以为每个ArtMesh 配置“正片叠底”和“滤色(发光)”颜色。应用这些设置时，它们将被保存到你的模型文件中，因此每当你下次加载该挂件时，它都会应用你的颜色设置（包括当你通过挂件快捷键加载 Live2D 挂件时）。
 
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+![顶部提示图标](img/img/hint_top.png)
+![重点提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
 通过普通 Live2D 参数 _(Live2D Cubism 4.2_ 及更高版本)设置“滤色(发光)”和“正片叠底”叠加将不再适用于使用此菜单重新着色的 ArtMesh。
+![底部提示图标](img/img/hint_bottom.png)
 
-[[img/img/hint_bottom.png]]
-
-[[img/img/live2d_item_recolor.png]]
+![Live2D挂件重新着色设置界面](img/img/live2d_item_recolor.png)
 
 你还可以使用 **快捷键** 为场景中的任何模型或 Live2D 挂件加载这些滤色/多重颜色预设。为此，请使用要注册的 ArtMesh 颜色准备模型，然后创建 **“ArtMesh 颜色预设”** 类型的新快捷键。使用快捷键 UI 上的 **“记住设置”** 按钮记录当前设置。然后可以使用该快捷键加载/卸载该滤色(屏幕色)/正片叠底预设。
 
 你还可以使用空设置创建该类型的快捷键，以创建删除该模型当前加载的颜色预设的快捷键。
 
-[[img/img/live2d_item_recolor_hotkey.png]]
+![Live2D挂件重新着色快捷键设置界面](img/img/live2d_item_recolor_hotkey.png)
 
 ## 如何制作自己的 Live2D 挂件？
 
@@ -111,7 +109,7 @@ Live2D 挂件本质上只是普通的 VTube Studio 模型。
 
 所做的就是将当前加载的模型文件夹复制到 **“Items”** 文件夹中，并将其作为 Live2D 挂件加载。然后，你可以加载另一个模型并将新的 Live2D 挂件附加到它。
 
-[[img/img/live2d_items_select.png]]
+![Live2D挂件选择界面](img/img/live2d_items_select.png)
 
 Live2D挂件没有限制，因此你甚至可以加载有完整建模的Live2D模型，或者使用它来加载Live2D主模型的多个实例。但是，加载多个大型/复杂模型肯定会在加载时让应用程序卡住几秒钟，并且除非你拥有强大的 CPU，否则在场景中激活许多大型模型可能导致软件无法正常工作。
 
@@ -127,9 +125,9 @@ Live2D挂件没有限制，因此你甚至可以加载有完整建模的Live2D�
 
 要创建一个碰撞箱，请选择 _“建模”=>“图形网格”=>“创建触碰检测用途的图形网格”_ 。然后，你可以将创建的透明图形网格编辑为你想要的任何形状。你还可以创建多个 **“碰撞箱”** 图形网格。从 Live2D Cubism 导出模型时，只需确保它们正确放置在纹理贴图上即可。
 
-[[img/img/artmesh_coll_1.png]]
+![Live2D模型碰撞箱创建界面1](img/img/artmesh_coll_1.png)
 
-[[img/img/artmesh_coll_2.png]]
+![Live2D模型碰撞箱创建界面2](img/img/artmesh_coll_2.png)
 
 ## VTube Studio 提示模型使用了太多蒙版。我该怎么办？
 
@@ -137,5 +135,4 @@ Live2D对剪贴蒙版有一定的限制。默认情况下，所有加载的模�
 
 如果增加蒙版数量，请确保每个蒙版的分辨率足够高，否则一些较大的蒙版可能会使轮廓模糊。建议设置 **256 个蒙版，每个蒙版为 512x512 像素** 。
 
-
-[[img/img/live2d_model_mask_config.png]]
+![Live2D模型蒙版配置界面](img/img/live2d_model_mask_config.png)

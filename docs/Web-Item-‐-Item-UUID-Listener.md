@@ -12,7 +12,7 @@ window.vuplex.postMessage('vts_web_item_request_item_id');
 
 然后，VTube Studio 将向您传递挂件 UUID。您可以使用该 ID 来执行诸如移动挂件、固定/取消固定、删除它（从而关闭 API 连接，因为浏览器进程已关闭）等操作。
 
-[[img/img/web_item_api_1.png|width=587px]]
+![web挂件api1](img/img/web_item_api_1.png){: height="" width="587px"}
 
 ```javascript
 <!DOCTYPE html>

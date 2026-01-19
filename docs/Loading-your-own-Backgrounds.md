@@ -2,19 +2,24 @@ VTube Studio提供了一些默认背景。其中有些是无法增加或移除�
 
 Steam端应用也提供了取色背景，如下图所示。在该背景中，你可以启用 **“透明推流”**。该模式可以让OBS和其他软件录制透明背景下的模型，这样就无需使用色度键了。
 
-[[img/img/obs_2.png|width=512px]]
+![OBS透明推流设置界面](img/img/obs_2.png){: height="" width="512px"}
 
 你可以在VTube Studio中自由增加背景（视频或图片）。请注意，在手机端使用的视频文件过大可能会导致应用因内存限制而崩溃。 
  
 支持的文件格式：
 
 * **图片**
-  * .jpg
-  * .png
+  
+  .jpg
+  
+  .png
+
 * **视频**
-  * .mp4
-  * .webm（可能不受部分平台支持）
+  
+  .mp4
+  
+  .webm（可能不受部分平台支持）
 
 背景文件夹可以在以下路径找到。在添加自定义背景后，你可能需要重启应用。
 
-[[img/img/background_data_folder.png]]
+![背景文件夹路径展示图](img/img/background_data_folder.png)

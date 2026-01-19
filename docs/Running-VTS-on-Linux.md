@@ -2,11 +2,11 @@
 
 感谢 **Ruyi#0110** 制作本指南。
 
-# 指南：在 Linux 上使用 OpenSeeFace 网络摄像头跟踪运行 VTube Studio
+## 指南：在 Linux 上使用 OpenSeeFace 网络摄像头跟踪运行 VTube Studio
 
 使用的发行版：**Arch Linux** 。$符号表示命令行的开头，不要包含它。
 
-## 安装 python39
+### 安装 python39
 
 `$ sudo pacman -Sy python39` 
 
@@ -17,7 +17,7 @@
 `python39` 是包名称本身(我认为在 Ubuntu 上它可能被称为 `python3.9`).
 
 
-## 安装要求
+### 安装要求
 
 `$ sudo pacman -Sy python-pip python-virtualenv git`
 
@@ -40,7 +40,7 @@ virtualenv -p python3.9 env
 
 
 
-## 下载/安装 OpenSeeFace
+### 下载/安装 OpenSeeFace
 
 `$ git clone https://github.com/emilianavt/OpenSeeFace`
 
@@ -81,14 +81,17 @@ virtualenv -p python3.9 env
 
 请注意，`-c 0` 代表你的相机。通常是 `0` 但如果你有多个摄像头（例如 Valve 索引中的摄像头），你可能需要在此处使用不同的数字(尝试 `1` , `2` , ...)
 
-## 启动 VTube Studio
+### 启动 VTube Studio
 
 现在你应该能够打开 VTube Studio，选择 `VTubeStudioCam` 并使用（如果分辨率显示为 4x4，请不要担心，我们需要的只是其中的 `OpenSeeFace` 信息）。
 
 请注意，每次要使用 `OpenSeeFace` 时都需要启动虚拟环境，使用以下三个命令:
 
+
 *  `$ cd OpenSeeFace`
+
 *  `$ source env/bin/activate`
+
 *  `$ python facetracker.py -c 0 -W 1280 -H 720 --discard-after 0 --scan-every 0 --no-3d-adapt 1 --max-feature-updates 900`
 
 请注意，`-c 0` 代表你的相机。通常是 `0` 但如果你有多个摄像头（例如 Valve 索引中的摄像头），你可能需要在此处使用不同的数字(尝试 `1` , `2` , ...)

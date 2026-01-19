@@ -8,11 +8,11 @@
 
 如果你停用 **“记录未改变的参数”** ，VTube Studio 将检查录制期间完全没有更改的所有参数，并默认将它们从动画中排除（你可以手动重新打开它们）。例如，这将排除用作动画录制期间未进行切换的任何表情切换参数。
 
-[[img/img/record_animation_1.png]]
+![Live2D动画录制设置界面](img/img/record_animation_1.png)
 
 录制完成后，你将看到动画配置界面。你可以打开和关闭单个参数，以在最终动画中包含/排除它们。滑块允许你选择所选参数的动画平滑度。曲线预览窗口将以红色显示该参数的最终动画曲线，以灰色显示原始数据。红点标记曲线段端点。如果打算在Live2D Cubism 动画编辑器中使用动画，请务必确保曲线看起来正常，并且具有合理的关键帧数量。
 
-[[img/img/record_animation_2.png]]
+![Live2D动画配置界面](img/img/record_animation_2.png)
 
 选择文件名并保存后，动画将以 `<name>.motion3.json` 的形式保存在你用于其他动画的同一文件夹中，或者如果你没有其他动画，则保存在模型文件旁边。
 
@@ -24,11 +24,11 @@
 
 然后，为动画创建一个新的空 _场景_ 。现在，你可以通过右键单击模型的紫色动画轨道并选择 **“导入动态...”** ，将 **.motion3.json** 文件导入到该场景中。
 
-[[img/img/record_animation_import_1.png]]
+![Live2D动画导入步骤1](img/img/record_animation_import_1.png)
 
 现在，你将把 `.motion3.json` 文件中的所有动画曲线导入到动画编辑器中。在那里，你可以按照你想要的任何方式修改动画。
 
-[[img/img/record_animation_import_2.png]]
+![Live2D动画导入步骤2](img/img/record_animation_import_2.png)
 
 ## 在 Live2D Cubism 物理编辑器中播放动画
 
@@ -38,8 +38,4 @@
 
 在物理窗口中，选择“播放列表”选项卡。单击“追加...”按钮创建新的“播放列表”，然后将动画场景添加到播放列表中。最后，选择“播放列表”下的播放列表。动画现在将在物理预览窗口中播放和循环。
 
-[[img/img/record_animation_import_3.png]]
-
-
-
-
+![Live2D物理编辑器播放动画设置](img/img/record_animation_import_3.png)

@@ -37,26 +37,45 @@
 ## 可以尝试的方法
 
 * 确保你的 GPU 驱动程序是最新的。
+
 * 确保你的 Windows 版本是最新的。
+
 * 运行一个内存检查工具，如下所示:
-  * MemTest64: https://www.techpowerup.com/memtest64/
-  * 如果此工具发现错误，则表明你的 RAM 有故障或 BIOS 中的时序设置错误。
-  * 如果有的话，你可以尝试通过关闭 XMP/EXPO 来修复该问题: [Turn off XMP](https://www.quora.com/What-is-XMP-on-a-PC-motherboard-and-how-do-you-disable-it).
-  * 你还可以尝试在 BIOS 中稍微降低 RAM 频率，看看是否可以修复内存错误。
+
+  MemTest64: https://www.techpowerup.com/memtest64/
+
+  如果此工具发现错误，则表明你的 RAM 有故障或 BIOS 中的时序设置错误。
+
+  如果有的话，你可以尝试通过关闭 XMP/EXPO 来修复该问题: [Turn off XMP](https://www.quora.com/What-is-XMP-on-a-PC-motherboard-and-how-do-you-disable-it).
+
+  你还可以尝试在 BIOS 中稍微降低 RAM 频率，看看是否可以修复内存错误。
+
 * VTS 运行时监控 GPU/CPU 温度。是否产生了异常升温？如果是这样，你可能需要检查你的 CPU/GPU 冷却。
+
 * 重新启动你的电脑。
+
 * 检查你正在运行的其他软件。 特别是像 "游戏加速器" (MSI AfterBurner, BullGuard 等) 或第三方安全软件 (Avast等) 之类的软件，因为这些软件可能会以某种方式干扰 VTube Studio。如果这解决了问题，请尝试找出具体是哪个应用程序引起的。如果你正在使用第三方安全软件，请尝试暂时禁用它们。
+
 * Citrix VPN 已被证明会导致许多基于 Unity 的应用程序（例如 VTS）出现此问题，因此请确保你没有同时运行该应用程序。
+
 * 如果你使用的是笔记本电脑，请检查电源设置并确保未处于省电模式。
+
 * 尝试 [以管理员启动 VTube Studio](Starting-as-Admin.md) 。
+
 * 下载安装最新的 [Visual C++ Redistributable](https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170).
+
 * 关闭 Steam 游戏内覆盖并尝试 [不通过Steam启动 VTube Studio](Starting-without-Steam.md) 。
+
 * 如果你有多个内存条，依次尝试单独使用其中的一个来启动电脑。如果问题发生在某一特定内存条上，则该内存条可能有故障。
+
 * 更新你的 BIOS (UEFI)。旧的 BIOS 版本有可能是产生随机崩溃的原因。
+
 * 在 BIOS 设置中，尝试以下操作:
-  * 检查你的内存条频率并尝试降低它。例如，如果你的内存条设置为 3600 MHz，请尝试将其设置为 2133 MHz。
-  * [关闭 XMP](https://www.quora.com/What-is-XMP-on-a-PC-motherboard-and-how-do-you-disable-it).
-  * 关闭 Intel Turbo Boost（它位于你的 BIOS 设置中，并且默认启用）。
-  * 如果你对 CPU 进行了超频，请尝试再次将其设置为出厂默认值。
-
-
+  
+  检查你的内存条频率并尝试降低它。例如，如果你的内存条设置为 3600 MHz，请尝试将其设置为 2133 MHz。
+  
+  [关闭 XMP](https://www.quora.com/What-is-XMP-on-a-PC-motherboard-and-how-do-you-disable-it).
+  
+  关闭 Intel Turbo Boost（它位于你的 BIOS 设置中，并且默认启用）。
+  
+  如果你对 CPU 进行了超频，请尝试再次将其设置为出厂默认值。

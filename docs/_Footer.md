@@ -1,1 +1,1 @@
-![kspDoki图标](img/img/kspDoki.png){width=24px} 如果你遇到了任何该手册中没有回答的问题，请到 [VTube Studio Discord](https://discord.gg/VTubeStudio){target="_blank"} ![Discord图标](img/img/discord_logo_new.png){width=34px} !!
+[![kspDoki图标](img/img/kspDoki.png){width=24px}](_Secret-Page.md) 如果你遇到了任何该手册中没有回答的问题，请到 [VTube Studio Discord](https://discord.gg/VTubeStudio){target="_blank"} ![Discord图标](img/img/discord_logo_new.png){width=34px} !!

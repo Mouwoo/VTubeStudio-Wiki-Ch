@@ -16,7 +16,7 @@ theme:
     - search.highlight    # 搜索结果高亮
     - toc.follow          # 右侧目录跟随滚动（配合侧边栏更易用）
     - content.code.copy   # 代码块复制按钮（额外酷炫功能）
-  # 可选：配置暗黑/浅色模式（增强酷炫感，不影响核心功能）
+
   palette:
     - scheme: default
       primary: indigo
@@ -35,74 +35,77 @@ theme:
 plugins:
   - search  # 原生搜索插件（支撑 search.suggest / search.highlight 功能）
 
-# 核心：保留原有侧边栏完整内容（导航结构与之前一致，无删减）
+# 核心：对齐译文目录，修正表述与路径，剔除重复，保留完整结构
 nav:
   - 首页: index.md
   - 插件: Plugins.md
   - 联系方式:
-    - Discord: https://discord.gg/VTubeStudio
-    - 推特: https://twitter.com/VTubeStudio
-    - 官方网站: https://Denchisoft.com
-    - 邮箱: mailto:denchi@denchisoft.com
-  - VTS 简介:
-    - Android vs. iPhone vs. 网络摄像头: Android-vs.-iPhone-vs.-Webcam.md
-    - 入门指南: Getting-Started.md
-    - 简介&必要环境: Introduction-&-Requirements.md
-    - 载入自定义模型: Loading-your-own-Models.md
-    - 哪里可以获得模型？: Models.md
-    - 恢复旧的 VTS 版本: Restore-old-VTS-Versions.md
-  - 教程:
-    - 多模型控制: Controlling-multiple-models-with-one-Webcam-or-iPhone-Android-device.md
-    - 模型配置复制: Copy-config-between-models.md
-    - 自定义背景载入: Loading-your-own-Backgrounds.md
-    - 模型&挂件重着色: Recoloring-Models-and-Items.md
-    - 动画录制: Record-Animations.md
-    - OBS 录制/串流: Recording-Streaming-with-OBS.md
-    - 数据传输至 VSeeFace: Sending-data-to-VSeeFace.md
-    - 管理员身份启动: Starting-as-Admin.md
-    - 非 Steam 启动: Starting-without-Steam.md
-    - Mac/PC 推流: Streaming-to-Mac-PC.md
-    - 多人联机: Multiplayer.md
+    - Discord 社区: https://discord.gg/VTubeStudio
+    - Twitter 官方账号: https://twitter.com/VTubeStudio
+    - 官方网站: https://denchisoft.com
+    - 邮件联系: mailto:denchi@denchisoft.com
+  - VTube Studio 简介:
+    - 安卓、苹果手机与摄像头对比: Android-vs.-iPhone-vs.-Webcam.md
+    - 快速上手指南: Getting-Started.md
+    - 简介与系统要求: Introduction-&-Requirements.md
+    - 为 VTube Studio 准备模型: Loading-your-own-Models.md
+    - 模型获取渠道: Models.md
+    - 恢复旧版 VTS: Restore-old-VTS-Versions.md
+    - 加入测试版: Joining-the-Beta.md
+  - 教程指南:
+    - 单设备控制多个模型: Controlling-multiple-models-with-one-Webcam-or-iPhone-Android-device.md
+    - 模型间复制配置: Copy-config-between-models.md
+    - 加载自定义背景: Loading-your-own-Backgrounds.md
+    - 模型与挂件重新着色: Recoloring-Models-and-Items.md
+    - 录制动画: Record-Animations.md
+    - 使用 OBS 录制/推流: Recording-Streaming-with-OBS.md
+    - 向 VSeeFace 发送数据: Sending-data-to-VSeeFace.md
+    - 以管理员身份启动: Starting-as-Admin.md
+    - 无需 Steam 启动: Starting-without-Steam.md
+    - 推流至电脑（Mac/PC）: Streaming-to-Mac-PC.md
+    - VNet 多人联机概述: Multiplayer.md
     - Steam 创意工坊: Workshop.md
-    - 截图与分享: Taking-Sharing-Screenshots.md
-    - Live2D Cubism 编辑器通信: Live2D-Cubism-Editor-Communication.md
-  - 帮助和故障排除:
-    - 延迟问题: Lag-Troubleshooting.md
-    - 连接问题: Connection-Issues-&-Troubleshooting.md
-    - 网络摄像头问题: Webcam-Troubleshooting.md
-    - 崩溃问题: VTS-Crash-Issue-0xC0000005.md
+    - 截图/分享截图: Taking-Sharing-Screenshots.md
+    - Live2D Cubism Editor 联动方法: Live2D-Cubism-Editor-Communication.md
+  - 帮助与问题排查:
+    - 卡顿问题排查: Lag-Troubleshooting.md
+    - 连接问题排查: Connection-Issues-&-Troubleshooting.md
+    - 摄像头问题排查: Webcam-Troubleshooting.md
+    - 崩溃问题排查: VTS-Crash-Issue-0xC0000005.md
     - 已知问题: Known-Issues.md
-    - 常见问题: FAQ.md
-  - VTS 设置和功能:
-    - VTube Studio 设置: VTube-Studio-Settings.md
+    - 常见问题（FAQ）: FAQ.md
+  - VTS 设置与功能:
+    - VTube Studio 全局设置: VTube-Studio-Settings.md
     - VTS 模型设置: VTS-Model-Settings.md
-    - VTS 模型文件: VTube-Studio-Model-File.md
-    - 视觉特效: Visual-Effects.md
-    - Twitch 互动: Twitch-Interaction.md
-    - Twitch 热键触发器: Twitch-Hotkey-Triggers.md
+    - VTube Studio 模型文件: VTube-Studio-Model-File.md
+    - 视觉效果: Visual-Effects.md
+    - Twitch 互动功能: Twitch-Interaction.md
+    - Twitch 快捷键触发: Twitch-Hotkey-Triggers.md
     - Spout2 背景: Spout2-Background.md
-    - 按键表情: Expressions-(a.k.a.-Stickers-or-Emotes).md
+    - 按键表情（贴纸/表情符号）: Expressions-(a.k.a.-Stickers-or-Emotes).md
     - 动画: Animations.md
-    - 动画与追踪等交互: Interaction-between-Animations,-Tracking,-Physics,-etc..md
-    - Mediapipe 面部捕捉: Mediapipe-Webcam-Tracker.md
-    - NVIDIA 面部捕捉: NVIDIA-Webcam-Tracker.md
-    - Tobii 眼球追踪: Tobii-Eye-Tracker.md
+    - 动画、追踪、物理系统等之间的交互: Interaction-between-Animations,-Tracking,-Physics,-etc..md
+    - 谷歌 Mediapipe 面部追踪器: Mediapipe-Webcam-Tracker.md
+    - NVIDIA Broadcast 面部追踪器: NVIDIA-Webcam-Tracker.md
+    - Tobii 眼动追踪: Tobii-Eye-Tracker.md
+    - 索尼 mocopi 追踪器: mocopi.md 
     - 手部追踪: Hand-Tracking.md
     - 音频口型同步: Lipsync.md
     - 挂件系统: Item-System.md
     - Live2D 挂件: Live2D-Items.md
-    - 层间挂件固定: Between-Layer-Item-Pinning.md
-    - 挂件场景&热键: Item-Scenes-and-Item-Hotkeys.md
-    - 特殊 ArtMesh 功能: Add-Special-ArtMesh-Functionality.md
-    - 屏幕光源着色: Display-Light-Overlay.md
-    - VNet 网络安全: VNet-Security.md
-    - 平台插件: Plugins.md
-    - Web 挂件: Web-Items.md
-    - Web 挂件 UUID 监听: Web-Item-‐-Item-UUID-Listener.md
-  - 杂项:
-    - 隐私政策&许可: Privacy-Policy,-Licensing-and-Further-Terms.md
-    - 漏洞赏金: Bug-Bounty-Program.md
-  - 隐藏彩蛋: _Secret-Page.md
+    - 图层间挂件固定: Between-Layer-Item-Pinning.md
+    - 挂件场景与挂件快捷键: Item-Scenes-and-Item-Hotkeys.md
+    - 网格/图层组: ArtMesh-Groups.md
+    - 添加网格特殊功能: Add-Special-ArtMesh-Functionality.md
+    - 显示光影叠加层: Display-Light-Overlay.md
+    - VNet 安全性: VNet-Security.md
+    - 插件（YouTube、Twitch 等）: Plugins.md
+    - 网页挂件: Web-Items.md
+    - 网页挂件插件: Web-Item-‐-Item-UUID-Listener.md
+  - 其他内容:
+    - 隐私政策、许可协议及其他条款: Privacy-Policy,-Licensing-and-Further-Terms.md
+    - 漏洞悬赏计划: Bug-Bounty-Program.md
+  - 备注: _Footer.md
 
 # 文档与站点目录配置（保留原有结构，确保文件路径正确）
 docs_dir: docs  # 你的 .md 文档存放目录（需将所有文件放入此目录）

@@ -1,17 +1,24 @@
-
 VTube Studio 可以使用你的麦克风来分析你的语音并据此计算 Live2D 模型嘴型。根据你的模型设置，这也可以与基于相机/手机的跟踪相结合。
 
-[[img/img/mouth_vowel_example_video.gif|width=512px]]
+![口型元音示例动图](img/img/mouth_vowel_example_video.gif){: height="" width="512px"}
 
 你可以在两种口型同步类型之间进行选择：
+
 * **单一口型:**
-  * 旧版选项，仅限 Windows，基于 [Occulus VR Lipsync](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-unity/)
-  * 不推荐, 建议使用 **更多口型** 。
-  * 本页不会进行讨论，因为 **更多口型**支持相同(甚至更多)参数并且更加准确。
+  
+  旧版选项，仅限 Windows，基于 [Occulus VR Lipsync](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-unity/)
+  
+  不推荐, 建议使用 **更多口型** 。
+  
+  本页不会进行讨论，因为 **更多口型**支持相同(甚至更多)参数并且更加准确。
+
 * **更多口型:**
-  * 基于 [hecomi](https://github.com/hecomi/)制作的 [uLipSync](https://github.com/hecomi/uLipSync) 
-  * 快速准确，可以使用自己的声音进行校准，从而准确检测 A、I、U、E、O 音素。
-  * 适用于所有平台（桌面和智能手机）。
+  
+  基于 [hecomi](https://github.com/hecomi/)制作的 [uLipSync](https://github.com/hecomi/uLipSync) 
+  
+  快速准确，可以使用自己的声音进行校准，从而准确检测 A、I、U、E、O 音素。
+  
+  适用于所有平台（桌面和智能手机）。
 
 **注意:** 这里不讨论“单一口型”。如果你仍在使用它，请考虑继续使用“更多口型”。它支持相同 _以及更多_ 参数，性能更高，并且适用于所有平台。
 
@@ -22,12 +29,14 @@ VTube Studio 可以使用你的麦克风来分析你的语音并据此计算 Liv
 主配置卡片上有三个滑块:
 
 * **音频增益:** 提高麦克风的音量，将对 `VoiceVolume` 和 `VoiceVolumePlusMouthOpen` 参数以及所有 `VoiceA/I/U/E/O` 参数产生影响。
+
 * **音量限幅:** 降噪，消除低音量噪音。最好将其保持在较低水平或为0，并在音频输入 VTube Studio 之前设置降噪程序。
+
 * **频率增益:** 对 `VoiceFrequency` 、 `VoiceFrequencyPlusMouthSmile` 以及所有 `VoiceA/I/U/E/O` 参数值进行提升。
 
 如果你的麦克风滞后，你可以单击“刷新”按钮重新启动麦克风。你还可以为此设置一个快捷键。
 
-[[img/img/settings_lipsync.png]]
+![口型同步设置界面](img/img/settings_lipsync.png)
 
 ## 校准
 
@@ -48,53 +57,78 @@ VTube Studio 可以使用你的麦克风来分析你的语音并据此计算 Liv
 以下参数可用:
 
 * `VoiceA`
-  * 0 到 1 之间
-  * 检测元音 `A` 的程度。
+  
+  0 到 1 之间
+  
+  检测元音 `A` 的程度。
+
 * `VoiceI`
-  * 0 到 1 之间
-  * 检测元音 `I` 的程度。
+  
+  0 到 1 之间
+  
+  检测元音 `I` 的程度。
+
 * `VoiceU`
-  * 0 到 1 之间
-  * 检测元音 `U` 的程度。
+  
+  0 到 1 之间
+  
+  检测元音 `U` 的程度。
+
 * `VoiceE`
-  * 0 到 1 之间
-  * 检测元音 `E` 的程度。
+  
+  0 到 1 之间
+  
+  检测元音 `E` 的程度。
+
 * `VoiceO`
-  * 0 到 1 之间
-  * 检测元音 `O` 的程度。 
+  
+  0 到 1 之间
+  
+  检测元音 `O` 的程度。 
+
 * `VoiceSilence`
-  * 0 到 1 之间
-  * 当检测到“静音”时（基于你的校准）或当音量非常低（接近 0）时为 1。
+  
+  0 到 1 之间
+  
+  当检测到“静音”时（基于你的校准）或当音量非常低（接近 0）时为 1。
+
 * `VoiceVolume` / `VoiceVolumePlusMouthOpen`
-  * 0 到 1 之间
-  * 检测到的麦克风音量有多大。
+  
+  0 到 1 之间
+  
+  检测到的麦克风音量有多大。
+
 * `VoiceFrequency` / `VoiceFrequencyPlusMouthSmile`
-  * 0 到 1 之间
-  * 如果你已经使用 `VoiceA`, `VoiceI`, ... 参数，则 **不会**使用这些参数。如果你的模型只有一个嘴形参数，这只是你的一种选择，因此你可以使用它将检测到的元音组合成一个参数。
-  * 根据检测到的元音计算。你可以设置如何乘以元音检测值来生成此参数。
+  
+  0 到 1 之间
+  
+  如果你已经使用 `VoiceA`, `VoiceI`, ... 参数，则 **不会**使用这些参数。如果你的模型只有一个嘴形参数，这只是你的一种选择，因此你可以使用它将检测到的元音组合成一个参数。
+  
+  根据检测到的元音计算。你可以设置如何乘以元音检测值来生成此参数。
 
 ## 如何在模型中使用（嘴部示例）
 
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+![顶部提示图标](img/img/hint_top.png)
+![重点提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
 **可以在此处下载示例模型:  ["aaa_BlendshapeMouthExample.zip"](https://raw.githubusercontent.com/wiki/Mouwoo/VTubeStudio/data/aaa_BlendshapeMouthExample.zip)**
 
-[[[img/img/zip.png|width=70px]]](https://raw.githubusercontent.com/wiki/Mouwoo/VTubeStudio/data/aaa_BlendshapeMouthExample.zip)
+[![压缩包图标](img/img/zip.png){: height="" width="70px"}](https://raw.githubusercontent.com/wiki/Mouwoo/VTubeStudio/data/aaa_BlendshapeMouthExample.zip)
 
 该示例模型经过简化（并且有点残缺），但它显示了一种可能的设置，可用于将 **基于相机/手机** 的口型同步与 **麦克风口型同步**相结合。
 
-在这个视频中，Brian Tsui 和我仔细研究了这个模型设置，试图找出它的工作原理。如果你有兴趣，请看这里: [[https://www.youtube.com/watch?v=X2-nHPeF5Q0]]
+在这个视频中，Brian Tsui 和我仔细研究了这个模型设置，试图找出它的工作原理。如果你有兴趣，请看这里: [https://www.youtube.com/watch?v=X2-nHPeF5Q0](https://www.youtube.com/watch?v=X2-nHPeF5Q0)
 
-[[img/img/hint_bottom.png]]
-
+![底部提示图标](img/img/hint_bottom.png)
 
 总的思路是这样的:
+
 * 当从麦克风检测到 **重要声音**时，根据声音的响度，口型会逐渐淡化为麦克风口型同步生成的形状。
+
 * 当检测到 **很少或没有声音**时，只需使用基于相机跟踪的口型即可。
 
 为了实现这一点，我们可以进行以下参数设置: (此处为常规 `MouthOpen`/`MouthForm` 参数设置, 但是也可以包括 **VBridger** 口型)
 
-[[img/img/mouth_lipsync_model_setup.png]]
+![口型同步模型设置界面](img/img/mouth_lipsync_model_setup.png)
 
 `ParamMouthOpen` 和 `ParamMouthForm` 的设置与平常一样。 此外，设置一个 `ParamSilence`参数。 这个参数之后会连接到 `VoiceSilence`, 因此当麦克风检测到没有或几乎没有声音时，它的值是 `1`。
 
@@ -108,19 +142,26 @@ VTube Studio 可以使用你的麦克风来分析你的语音并据此计算 Liv
 
 我不建议使用它作为“模板”。它只是传达想法的参考。
 
-[[img/img/vowel_ms.png]]
+![元音嘴型参考图](img/img/vowel_ms.png)
 
 请记住，如果多个参数同时位于 1 ，融合变形会看起来很怪。 VTube Studio 将确保控制这些 Live2D 融合变形的口型同步参数( `VoiceA`, `VoiceI`, `VoiceU`, `VoiceE`, `VoiceO`)永远不会同时为 1 ，并且控制它们仅在较小的参数值下混合。
 
 这就是你需要的全部设置。现在，将模型导入 VTube Studio 并运行 **更多口型同步的自动设置**（口型同步配置底部的按钮）。这将设置以下映射（当然你也可以手动设置）:
 
 * `MouthOpen` → `ParamMouthOpen`
+
 * `MouthSmile` → `ParamMouthForm`
+
 * `VoiceSilence` → `ParamSilence`
+
 * `VoiceA` → `ParamA`
+
 * `VoiceI` → `ParamI`
+
 * `VoiceU` → `ParamU`
+
 * `VoiceE` → `ParamE`
+
 * `VoiceO` → `ParamO`
 
 同样，当音频口型同步系统检测到音量时, `ParamSilence` 参数将强制将 `MouthOpen` 和 `MouthSmile` 设置为默认值，此时融合变形将进行接管，它们由 `VoiceA`, `VoiceI`, ... 跟踪值驱动。
@@ -143,11 +184,4 @@ VTube Studio 可以使用你的麦克风来分析你的语音并据此计算 Liv
 
 确切的参数和元音映射设置很大程度上取决于你的模型设置。尝试一下，看看什么对你有用。这可能需要一些尝试和错误，但如果设置正确，这看起来真的很棒，尤其是在唱歌的时候 ♪ ♫ ♬
 
-<br/>
-<p align="center">
-  <img src="img/img/karaoke_saiten.png" width="412"/>
-</p>
-<br/>
-
-
-
+![卡拉OK评分示例图](img/img/karaoke_saiten.png){: height="" width="412px"}

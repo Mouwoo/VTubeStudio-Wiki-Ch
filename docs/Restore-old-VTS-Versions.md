@@ -1,25 +1,25 @@
-从 **VTube Studio 1.26.11** 版本更新开始，你将能够在 Steam（macOS 和 Windows）上恢复旧版本的 VTube Studio。适用于 **2023 年 6 月 14 日之后**发布的 VTube Studio 版本。
+### 从2023年6月开始，你可以在Steam平台（macOS和Windows系统）上恢复VTube Studio的旧版本
 
-一般来说，我建议始终保持最新版本，并在 [VTube Studio Discord](https://discord.gg/VTubeStudio) 中报告你发现的任何错误，以便我们尽快修复。但在某些紧急情况下，可以尝试临时回滚到更适合你的旧版本。
+通常情况下，我建议你始终使用最新版本，并在[VTube Studio Discord社区](https://discord.gg/VTubeStudio)中反馈遇到的任何漏洞，以便开发者尽快修复。但在某些紧急情况下，临时回滚到对你而言运行更稳定的旧版本是合理的选择。
 
-请记住，要使 [VNet 多人联机](Multiplayer.md) 正常工作，所有协作参与者都应使用相同版本的 VTube Studio，但如果某些版本使用相同的 VNet 网络代码版本，那么它们可能兼容。
+需要注意的是，若要让[VNet 多人联机](Multiplayer.md)功能正常工作，所有协作参与者都应使用相同版本的VTube Studio。不过，如果不同版本使用的是相同的虚拟网络编码版本，它们也可能相互兼容。
 
-如果你使用的是 VTube Studio 的 **旧版本** 分支，那么 **Steam 将不再自动更新 VTube Studio**，并且你将**不会收到任何进一步的更新和错误修复**，直到你切换回正常的公共版本。
+如果你切换到了VTube Studio的**旧版本分支**，Steam将**不再自动更新**该软件，且在你切回常规公开发布版本之前，**不会收到任何后续的更新和漏洞修复**。
 
-也不能保证这些旧的 Steam 版本将永远与 **VNet** 以及 **iOS** 和 **Android** 应用保持兼容，因此应该在没有其他选项时才选择回滚，并尽快再次返回到当前的公共版本。
+同时，无法保证这些Steam旧版本会永久兼容**VNet 多人联机**功能以及**iOS和Android移动端应用**。因此，请仅在别无选择时才进行版本回滚，并尽快切回当前的公开发布版本。
 
-[[img/img/steam_vts_old_versions_1.png]]
+![steam_vts_old_versions_1](img/img/steam_vts_old_versions_1.png)
 
 ## 如何恢复旧版本？
 
-⚠️ **重要提示:** 在切换到旧版本之前，请为你所有的模型、物品和背景进行备份！！ 将你的 `Live2DModels`, `Items` 和 `Backgrounds` 文件夹复制到VTube Studio Steam 文件夹之外的某个地方。切换版本不会删除任何文件，但最好是安全起见，因为有反馈称 Steam 更新随机删除模型文件！！⚠️ 
+⚠️ **重要提示：** 在切换到旧版本之前，请为你所有的模型、挂件和背景制作备份副本！具体操作是将`Live2DModels`、`Items`和`Backgrounds`文件夹复制到VTube Studio的Steam安装目录之外的位置。版本切换本身不会删除任何文件，但鉴于曾有报告显示Steam更新会随机删除模型文件，最好还是做好万全准备！⚠️
 
-旧版本可通过 **Steam 测试版**使用。
+旧版本以**Steam测试分支**的形式提供。
 
-在你的 Steam 游戏库中，右键单击`VTube Studio`，然后选择`属性...`→`测试版`。在那里，你会找到一个显示旧版本的下拉列表。
+在你的Steam游戏库中，右键点击`VTube Studio`，选择`属性...` → `测试版`。在该页面中，你会看到一个下拉列表，其中包含所有可用的旧版本。
 
-你可以随时通过选择`无`作为测试版来更改回正常分支。
+你可以随时通过在测试版选项中选择`无`，切回常规版本分支。
 
-同样，在尝试切换到旧版本的 VTube Studio 之前，请确保所有文件数据都有备份。
+再次提醒，请务必在尝试切换到VTube Studio旧版本**之前**，备份好你所有的资源文件。
 
-[[img/img/steam_vts_old_versions_2.png]]
+![steam_vts_old_versions_2](img/img/steam_vts_old_versions_2.png)

@@ -10,7 +10,6 @@
 
 如果是 USB 网络摄像头，请尝试将其插入其他 USB 端口。这有时会有所帮助。
 
-
 ## 尝试在 VTube Studio 中重新选择网络摄像头
 
 转到网络摄像头设置并再次选择网络摄像头。然后开始跟踪。
@@ -25,7 +24,7 @@
 
 特别是对于 `"ESET Antivirus"` ，请确保像这样停用 `Webcam Protection` :
 
-[[img/img/eset_antivirus_webcam_fix.png]]
+![ESET杀毒软件摄像头保护设置](img/img/eset_antivirus_webcam_fix.png)
 
 ## 安装 Visual C++ 可再发行组件
 
@@ -80,7 +79,3 @@ VTube Studio (OpenSeeFace) 使用的网络摄像头跟踪器使用本地网络�
 如果这些都没有帮助，请通过 VTube Studio Discord 进行询问。创建主题时，请发布你的日志。日志（.txt 文件）可以在 `Live2DModels` 文件夹旁边的 `Logs` 文件夹中找到。
 
 https://discord.gg/VTubeStudio
-
-
-
-

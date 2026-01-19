@@ -6,4 +6,4 @@
 
 然后使用 Steam 或`start_without_steam.bat`文件正常启动 VTS。
 
-[[img/img/start_as_admin_1.png]]
+![以管理员身份运行VTube Studio设置界面](img/img/start_as_admin_1.png)

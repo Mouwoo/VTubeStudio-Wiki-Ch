@@ -1,0 +1,3135 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Streaming-to-Mac-PC/">
+      
+      
+        <link rel="next" href="../Workshop/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/logo/vts_logo_transparent.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>VNet 多人联机概述 - VTS 手册</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="VTS 手册" class="md-header__button md-logo" aria-label="VTS 手册" data-md-component="logo">
+      
+  <img src="../img/logo/vts_logo_transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VTS 手册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VNet 多人联机概述
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="切换至暗黑模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至暗黑模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="orange"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="VTS 手册" class="md-nav__button md-logo" aria-label="VTS 手册" data-md-component="logo">
+      
+  <img src="../img/logo/vts_logo_transparent.png" alt="logo">
+
+    </a>
+    VTS 手册
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    联系方式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    联系方式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/VTubeStudio" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discord 社区
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://twitter.com/VTubeStudio" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twitter 官方账号
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://denchisoft.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    官方网站
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mailto:denchi@denchisoft.com" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    邮件联系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VTube Studio 简介
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VTube Studio 简介
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Android-vs.-iPhone-vs.-Webcam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安卓、苹果手机与摄像头对比
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速上手指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction-%26-Requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介与系统要求
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Loading-your-own-Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    为 VTube Studio 准备模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型获取渠道
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Restore-old-VTS-Versions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    恢复旧版 VTS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Joining-the-Beta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    加入测试版
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    教程指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    教程指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Controlling-multiple-models-with-one-Webcam-or-iPhone-Android-device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    单设备控制多个模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Copy-config-between-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型间复制配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Loading-your-own-Backgrounds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    加载自定义背景
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recoloring-Models-and-Items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型与挂件重新着色
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Record-Animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    录制动画
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recording-Streaming-with-OBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用 OBS 录制/推流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sending-data-to-VSeeFace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    向 VSeeFace 发送数据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Starting-as-Admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    以管理员身份启动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Starting-without-Steam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    无需 Steam 启动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Streaming-to-Mac-PC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    推流至电脑（Mac/PC）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VNet 多人联机概述
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VNet 多人联机概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何主持/加入会话？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        当我尝试打开协作屏幕时，它显示“无法连接到 Steam 服务器”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何重新排序模型？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何查看谁加入了合作？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何将其他参与者固定在自己身上？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        我的 Live2D 模型中有逐帧参数，但对于其他参与者来说，它们看起来很糟糕。如何解决这个问题？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性能如何？我需要一台功能强大的电脑和良好的网络吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live2d_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有什么限制吗？例如，物品/模型尺寸或Live2D物品？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可以将挂件固定给其他人吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可以在协作期间修改我的模型设置吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steam_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可以在与朋友一起玩 Steam 游戏时使用它吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有东西不工作了！我该怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么有时会与协作断开连接？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        这有多安全？我的模型会被盗吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Workshop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Steam 创意工坊
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Taking-Sharing-Screenshots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    截图/分享截图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Live2D-Cubism-Editor-Communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Live2D Cubism Editor 联动方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    帮助与问题排查
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    帮助与问题排查
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lag-Troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卡顿问题排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connection-Issues-%26-Troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    连接问题排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Webcam-Troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    摄像头问题排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VTS-Crash-Issue-0xC0000005/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    崩溃问题排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Known-Issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    已知问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常见问题（FAQ）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VTS 设置与功能
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VTS 设置与功能
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VTube-Studio-Settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VTube Studio 全局设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VTS-Model-Settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VTS 模型设置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VTube-Studio-Model-File/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VTube Studio 模型文件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Visual-Effects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视觉效果
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Twitch-Interaction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twitch 互动功能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Twitch-Hotkey-Triggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twitch 快捷键触发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Spout2-Background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spout2 背景
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Expressions-%28a.k.a.-Stickers-or-Emotes%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    按键表情（贴纸/表情符号）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动画
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Interaction-between-Animations%2C-Tracking%2C-Physics%2C-etc./" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动画、追踪、物理系统等之间的交互
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mediapipe-Webcam-Tracker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    谷歌 Mediapipe 面部追踪器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NVIDIA-Webcam-Tracker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NVIDIA Broadcast 面部追踪器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tobii-Eye-Tracker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tobii 眼动追踪
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mocopi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    索尼 mocopi 追踪器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hand-Tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    手部追踪
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lipsync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频口型同步
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Item-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    挂件系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Live2D-Items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Live2D 挂件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Between-Layer-Item-Pinning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图层间挂件固定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Item-Scenes-and-Item-Hotkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    挂件场景与挂件快捷键
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ArtMesh-Groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网格/图层组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Add-Special-ArtMesh-Functionality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    添加网格特殊功能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Display-Light-Overlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    显示光影叠加层
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VNet-Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VNet 安全性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web-Items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网页挂件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Web-Item-%E2%80%90-Item-UUID-Listener/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网页挂件插件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他内容
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他内容
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Privacy-Policy%2C-Licensing-and-Further-Terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    隐私政策、许可协议及其他条款
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bug-Bounty-Program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    漏洞悬赏计划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_Footer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    备注
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何主持/加入会话？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        当我尝试打开协作屏幕时，它显示“无法连接到 Steam 服务器”
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何重新排序模型？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何查看谁加入了合作？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何将其他参与者固定在自己身上？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        我的 Live2D 模型中有逐帧参数，但对于其他参与者来说，它们看起来很糟糕。如何解决这个问题？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性能如何？我需要一台功能强大的电脑和良好的网络吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live2d_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有什么限制吗？例如，物品/模型尺寸或Live2D物品？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可以将挂件固定给其他人吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可以在协作期间修改我的模型设置吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steam_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可以在与朋友一起玩 Steam 游戏时使用它吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有东西不工作了！我该怎么办？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        为什么有时会与协作断开连接？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        这有多安全？我的模型会被盗吗？
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Controlling-multiple-models-with-one-Webcam-or-iPhone-Android-device/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    教程指南
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>VNet 多人联机概述</h1>
+
+<p><a href=""><img alt="akaridance_anim" src="../img/img/vnet/akaridance_anim.gif" width="110px" /></a>
+<a href=""><img alt="vnet_icon_text_dark" src="../img/img/vnet/vnet_icon_text_dark.png" width="200px" /></a></p>
+<p><strong>VNet</strong> 是 VTube Studio 内置的 <strong>在线协作系统</strong> , 可作为 Windows 和 macOS 的 <strong>付费 DLC</strong> 使用。</p>
+<p>点击此处购买: https://store.steampowered.com/app/2384550</p>
+<ul>
+<li>
+<p>它适用于<strong>最多 6 人</strong>的协作会话。</p>
+</li>
+<li>
+<p>你必须<strong>通过 Steam 启动 VTube Studio</strong> 才能使用 VNet。</p>
+</li>
+<li>
+<p>你加载的所有模型和挂件（包括Live2D挂件）都会<strong>自动同步到其他参与者</strong>。目前对你可以加载的数量没有限制。</p>
+</li>
+<li>
+<p>你的协作参与者将<strong>直接显示在你的 VTS 中</strong>，因此你不再需要处理糟糕的协作视频质量。</p>
+</li>
+<li>
+<p>你甚至可以将其他参与者的模型<strong>固定到自己身上</strong>。</p>
+</li>
+<li>
+<p>运动数据通过 Steam P2P 网络在参与者之间发送，因此你必须登录 Steam 才能使用它，并且托管协作的人必须是所有参与者的 <strong>Steam 好友</strong>。</p>
+</li>
+</ul>
+<p><img alt="hint_top" src="../img/img/hint_top.png" />
+<img alt="Important Point!!" src="../img/img/bunny_point.png" />
+<strong>注意:</strong> 本页介绍什么是 VNet 以及如何使用它。若要了解安全方面，请查看 "<a href="../VNet-Security/">VNet网络安全</a>".
+<img alt="hint_bottom" src="../img/img/hint_bottom.png" /></p>
+<h2 id="_1">如何主持/加入会话？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>主菜单中有两个新按钮：</p>
+<ul>
+<li><strong>[左]: 协作设置</strong></li>
+</ul>
+<p>使用它来设置或加入协作。将显示私人详细信息，例如 Steam 名称、Steam ID 和 Steam 个人资料图片。</p>
+<ul>
+<li><strong>[右]: 协作控制</strong></li>
+</ul>
+<p>在协作期间使用它。将显示谁在协作中，但仅显示昵称，不显示个人信息。</p>
+<p><img alt="vnet_main_buttons" src="../img/img/vnet/vnet_main_buttons.png" /></p>
+<p>在 <code>协作设置界面</code> 中，你可以选择是否要主持或加入会话。然后，选择一个昵称。这将用于在会话期间识别你的身份，并且将代替你的 Steam 名称或 Steam ID 显示，因为许多人可能希望将这些信息保密。</p>
+<p>确保输入正确的密码，并且协作中的所有人员都使用相同版本的 VTube Studio。然后，主持/加入：</p>
+<ul>
+<li>
+<p>如果你正在主持协作，则最多可以选择 <strong>3位</strong> Steam 好友添加到协作中。 ---&gt; 然后按 <code>Host</code> 按钮。</p>
+</li>
+<li>
+<p>如果你要加入协作，则必须选择正在主持对应协作的 Steam 好友。 ---&gt; 然后按 <code>Join</code> 按钮。</p>
+</li>
+</ul>
+<p>你还可以选择 <code>文件服务器区域</code> 。这决定了你的文件将上传到哪个 VNet 服务器。选择离你最近的区域，以便你的模型/挂件尽快上传。主机还可以设置 <code>数据 FPS</code> 。这决定了协作参与者之间发送移动数据的速度。</p>
+<p><img alt="hint_top" src="../img/img/hint_top.png" />
+<img alt="Important Point!!" src="../img/img/bunny_point.png" />
+应该让拥有最佳互联网连接（上传/下载速度）的人主持会议！
+<img alt="hint_bottom" src="../img/img/hint_bottom.png" /></p>
+<p>在右上角，你可以访问<strong>多人联动设置</strong>。例如，这使你可以禁止共享拖放挂件（作为安全措施）。</p>
+<p><img alt="vnet_basic_setup" src="../img/img/vnet/vnet_basic_setup.png" /></p>
+<p>然后，你将看到协作中所有其他客户的列表，并可以决定是否要加入。</p>
+<p>如果你决定加入，你现在正处于协作会话中。你加载的任何模型/挂件将自动同步到所有其他参与者。</p>
+<p>此屏幕将显示所有已加入客户端的 ping，以及它们当前是否在后台上传/下载任何挂件/模型。他们的个人资料图片旁边有一个红点表示他们目前尚未加入合作。</p>
+<p><img alt="vnet_users_list" src="../img/img/vnet/vnet_users_list.png" /></p>
+<p>当人们加入时，他们的模型/物品将自动生成，并在他们离开时消失。</p>
+<p><img alt="vnet_main_scene" src="../img/img/vnet/vnet_main_scene.png" /></p>
+<h2 id="steam">当我尝试打开协作屏幕时，它显示“无法连接到 Steam 服务器”<a class="headerlink" href="#steam" title="Permanent link">&para;</a></h2>
+<p>确保你通过 Steam 正常启动 VTube Studio。或者尝试重新启动 Steam 并确保 Steam 和 VTube Studio 都是最新的。</p>
+<p>如果没有帮助，请尝试在 VTube Studio 中打开 <a href="../Workshop/">创意工坊</a> 并下载一个挂件，然后重试。</p>
+<p>最后，确保你的帐户具有有效的个人资料图片集。有时 Steam 会删除个人资料图片，这会导致你的帐户无法连接到 Steam 服务器。</p>
+<h2 id="_2">如何重新排序模型？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>你可以拖动/缩放/调整自己的模型大小或可以使用鼠标左键或右键进行拖动。</p>
+<ul>
+<li>
+<p><strong>[左]:</strong> 当你开始左键单击拖动时，你的模型将设置为顶部，高于所有其他参与者模型。这将发生在你这边和所有其他参与者身上。他们可以做同样的事情来让自己处于领先地位。</p>
+</li>
+<li>
+<p><strong>[右]:</strong> 你可以右键单击拖动以拖动模型，而不会更改模型顺序。</p>
+</li>
+</ul>
+<p><img alt="vnet_gif_drag" src="../img/img/vnet/vnet_gif_drag.gif" /></p>
+<h2 id="_3">如何查看谁加入了合作？<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>打开 <strong>"联动控制面板"</strong> 。 是这个按钮。</p>
+<p><img alt="vnet_control" src="../img/img/vnet/vnet_control.png" /></p>
+<p>此面板可以在会话期间安全地打开，因为它不显示 Steam ID 等详细信息。它只显示参与者选择的昵称。主持人将在那里被标上一个小皇冠。</p>
+<p>你也可以从此处退出协作会话。当主持人离开时，会话结束，每个人都会断开连接。</p>
+<p><strong>关于 ping:</strong> ping 是主机接收你的移动数据以及主机响应你所需的时间（以毫秒为单位）。因此，主机将始终具有 0 毫秒的 ping。 你的 ping 主要取决于你与主机的距离以及你是否拥有良好的互联网连接。通常，它应该在 100 到 300 毫秒之间。</p>
+<p>在此面板上，你可以执行 4 项操作:</p>
+<ul>
+<li>
+<p><strong>[1]:</strong> 切换每个参与者的模型位置控制模式（将其他参与者设置为Live2D挂件，如下所述）。</p>
+</li>
+<li>
+<p><strong>[2]:</strong> 显示/隐藏每个参与者的模型。当只有一个人进行推流时，这非常有用，因为你的 VTS 无需渲染/动画其他参与者的模型。</p>
+</li>
+<li>
+<p><strong>[3]:</strong> 显示/隐藏每个参与者的挂件。</p>
+</li>
+<li>
+<p><strong>[4]:</strong> 为该参与者设置“平滑”（可能会将其重命名为“运动缓冲区”，因为它并不是真正平滑）。这使你可以为移动数据设置缓冲区（0 到 1 秒之间）。更大的缓冲区允许 VTS 消除因网络延迟引起的卡顿，但也会引入延迟。如果你没有遇到任何卡顿，请将此值保持在 0.05（默认）到 0.10 秒，否则增加它直到抖动消失。</p>
+</li>
+</ul>
+<h2 id="_4">如何将其他参与者固定在自己身上？<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>你可以通过为参与者打开 <code>"由你控制位置"</code> 来做到这一点。这实质上将他们的模型变成了一个 Live2D 挂件，你可以拖动、调整大小、旋转甚至固定到自己身上。</p>
+<p><img alt="vnet_gif_pin_to_other" src="../img/img/vnet/vnet_gif_pin_to_other.gif" /></p>
+<h2 id="live2d">我的 Live2D 模型中有逐帧参数，但对于其他参与者来说，它们看起来很糟糕。如何解决这个问题？<a class="headerlink" href="#live2d" title="Permanent link">&para;</a></h2>
+<p>尝试关闭逐帧 Live2D 参数的 <code>VNet 参数平滑</code> 你可以在这里执行此操作:</p>
+<p><img alt="vnet_param_smoothing" src="../img/img/vnet/vnet_param_smoothing.png" /></p>
+<h2 id="_5">性能如何？我需要一台功能强大的电脑和良好的网络吗？<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>渲染和动画化多个复杂的Live2D模型可能需要良好的CPU。但从本质上讲，这与通过 VTube Studio Live2D 挂件在一个 VTube Studio 实例中加载多个模型是一样的。</p>
+<p>由于所有模型都存储在内存中，并且从未保存在协作合作伙伴的硬盘上，因此加载多个大型模型也可能需要大量内存：如果下载的加密模型文件总共为 50 MB，则在下载模型时，VTube Studio 的内存使用量将增加至少 50 MB。物品也是如此。</p>
+<p>至于互联网连接，这取决于你希望将模型动画数据发送给其他协作参与者的速度。在 30-60 FPS 时，你可以预期 VTube Studio 需要大约 30-60 kb/s 的带宽上下。对于协作主机，所需的带宽可能在 100-300 kb/s 范围内。这主要取决于所用模型的复杂程度（Live2D参数的数量）。</p>
+<p>你目前最多可以与 6 人进行协作，但请记住，在一台 PC 上运行 6 个复杂模型可能会对你的 CPU 造成很大压力。但是对于简单的模型应该没有这种问题。</p>
+<h2 id="live2d_1">有什么限制吗？例如，物品/模型尺寸或Live2D物品？<a class="headerlink" href="#live2d_1" title="Permanent link">&para;</a></h2>
+<p>目前，存在一些限制，但如果正常使用 VNet，则不太可能遇到这些限制。</p>
+<ul>
+<li>
+<p><strong>[1]:</strong> 你可以加载任意数量的挂件、Live2D挂件或模型。</p>
+</li>
+<li>
+<p><strong>[2]:</strong> 你加载的任何挂件/模型最多可以有 <strong>120 个</strong>文件。</p>
+</li>
+<li>
+<p><strong>[3]:</strong> 加载的任何挂件/模型的总大小最多为 <strong>190 MB</strong>（VNet 压缩后）。</p>
+</li>
+<li>
+<p><strong>[4]:</strong> 包含至少一个大于 <strong>90 MB</strong>（压缩后）文件的挂件/模型将无法正常使用。</p>
+</li>
+<li>
+<p><strong>[5]:</strong> 你可以加载任意数量的Live2D挂件，但如果你的Live2D挂件中的Live2D参数总数大于100，则参数计数超过100的Live2D挂件模型将不会同步其参数值。不过，它们仍然会为其他参与者加载，并对他们这边的物理做出反应。</p>
+</li>
+<li>
+<p><strong>[6]:</strong> Live2D参数值不能大于9000或小于-9000。</p>
+</li>
+<li>
+<p><strong>[7]:</strong> 所有模型/项目都保存在内存中，因此如果你在会话期间加载许多非常大的项目/模型，VTube Studio RAM 使用量将会增加，因此请小心。目前没有限制，因此这可能会使 VTube Studio 崩溃。</p>
+</li>
+<li>
+<p><strong>[8]:</strong> 合作时间限制为 24 小时。24 小时后，协作会自动结束，必须重新启动。</p>
+</li>
+</ul>
+<h2 id="_6">可以将挂件固定给其他人吗？<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>目前不能</strong>。我可能会考虑在后续版本中添加该功能。</p>
+<h2 id="_7">可以在协作期间修改我的模型设置吗？<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>它可能适用于某些模型设置。一般来说，我不推荐。</p>
+<h2 id="steam_1">可以在与朋友一起玩 Steam 游戏时使用它吗？<a class="headerlink" href="#steam_1" title="Permanent link">&para;</a></h2>
+<p>是的，你可以通过 Steam 运行 VTube Studio 以及通过 Steam 正常启动任意数量的 Steam 游戏。</p>
+<p>如果游戏使用 steam <code>"远程同乐"</code> 功能，请确保在 VTube Studio <strong>之后</strong> 启动游戏。这会将游戏标记为“当前玩的游戏”，并且你发送的所有邀请都将针对该游戏。</p>
+<h2 id="_8">有东西不工作了！我该怎么办？<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>请记住，此功能非常新。初始版本可能存在一些错误。</p>
+<p>请报告 VTube Studio Discord 中的任何错误: https://discord.gg/VTubeStudio  :heart:</p>
+<h2 id="_9">为什么有时会与协作断开连接？<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>发生这种情况的原因有很多。你的互联网连接出现小问题可能会导致 Steam 断开你与协作的连接。如果你是主持人，这意味着协作会立即结束，每个人都会断开连接。在这种情况下，你必须重新启动协作。</p>
+<p>Steam 连接问题的其他典型原因包括:</p>
+<ul>
+<li>
+<p>VPN</p>
+</li>
+<li>
+<p>杀毒软件 (比如 AVG)</p>
+</li>
+<li>
+<p>防火墙</p>
+</li>
+<li>
+<p>应用程序性能改进软件</p>
+</li>
+<li>
+<p>消耗大量带宽的 P2P 文件共享应用程序</p>
+</li>
+<li>
+<p>Steam 服务器暂时不稳定/关闭</p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<p>有关更多信息和故障排除，请查看 Steam 上的官方指南: https://help.steampowered.com/zh-cn/faqs/view/1F39-DCB4-FF28-5748</p>
+<p>此外，Steam <strong>每周都会进行一次定期维护</strong> ，在此期间在线服务（包括 VTube Studio 的 VNet）将短时间不可用。维护在 <strong>太平洋时间每周二下午 3-4 点左右</strong> 进行，通常持续 <strong>10-30 分钟</strong> 。请合理计划你的协作安排。</p>
+<p>你可以在此网站上查看当前 Steam 状态信息: https://steamstat.us/</p>
+<h2 id="_10">这有多安全？我的模型会被盗吗？<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>所有安全详细信息都可以在 "<a href="../VNet-Security/">VNet网络安全</a>" 页面上找到。一般来说，如果你不信任其他协作参与者，则不应使用此功能，因为他们可以在协作期间使用专门的软件窃取你的共享模型（仅你加载的模型/项目）。对于 VNet 以及与其他参与者共享模型的任何其他协作应用程序来说都是如此。合作之外的人无法窃取你的模型。</p>
+<p>Net 只是你可以在协作中使用的又一种工具。在许多情况下，使用基于视频共享的工具，比如 <a href="https://vdo.ninja/">VDO.Ninja</a>, <a href="https://discord.com/">Discord</a>, <a href="https://ping.gg/">ping.gg</a> 或 <a href="https://iv.gg/multiv/login">MultiV</a> 是正确的选择。</p>
+<p>如果你是安全研究人员并发现任何漏洞，请通过邮箱 <strong>support at denchisoft dot com</strong> 与我联系 ❤</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sidebar", "navigation.expand", "navigation.indexes", "navigation.path", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,9 +1,17 @@
 恭喜，你发现了隐藏页面，要对大家保密哦！！
 
-<br/>
+![kspCute图片](img/img/kspCute.png)
 
-[[img/img/kspCute.png]][[img/img/kspCute.png]][[img/img/kspCute.png]][[img/img/kspCute.png]][[img/img/kspCute.png]][[img/img/kspCute.png]][[img/img/kspCute.png]]
+![kspCute图片](img/img/kspCute.png)
 
-<br/>
+![kspCute图片](img/img/kspCute.png)
 
-[[img/img/akari_gif.gif|alt="Akari"|width=1200px]]
+![kspCute图片](img/img/kspCute.png)
+
+![kspCute图片](img/img/kspCute.png)
+
+![kspCute图片](img/img/kspCute.png)
+
+![kspCute图片](img/img/kspCute.png)
+
+![Akari动图](img/img/akari_gif.gif){: height="" width="1200px"}

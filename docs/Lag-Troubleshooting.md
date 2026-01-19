@@ -8,14 +8,13 @@
 
 有关如何以管理员身份启动 VTube Studio 的信息，请参阅 [此页面](Starting-as-Admin.md).
 
-
 ## 使用“GPU 优先级”按钮
 
 **仅限英伟达！！**
 
-如果你有 NVIDIA GPU，你可以将 VTube Studio 设置为具有 GPU 优先级。如果你同时玩游戏并且游戏占用了所有 GPU 资源，这会很有帮助。未来它将自动开启，但现在如果你希望 VTube Studio 具有 GPU 优先级，则必须在每次启动 VTube Studio 时按此按钮：:
+如果你有 NVIDIA GPU，你可以将 VTube Studio 设置为具有 GPU 优先级。如果你同时玩游戏并且游戏占用了所有 GPU 资源，这会很有帮助。未来它将自动开启，但现在如果你希望 VTube Studio 具有 GPU 优先级，则必须在每次启动 VTube Studio 时按此按钮：
 
-[[img/img/nvidia_gpu_priority_mode.png]]
+![NVIDIA GPU优先级模式设置界面](img/img/nvidia_gpu_priority_mode.png)
 
 ## 检查日志
 
@@ -31,7 +30,7 @@
 
 如果你安装了 Norton/BullGuard，请确保“游戏优化器”设置已关闭。
 
-[[img/img/norton_game_optimizer.png]]
+![诺顿游戏优化器设置界面](img/img/norton_game_optimizer.png)
 
 ## 检查你的安全软件
 
@@ -60,20 +59,22 @@
 NVIDIA G-Sync 可能会导致问题，尤其是在多显示器设置上。 [尝试用这种方法关闭它](https://cn.bing.com/search?q=%E5%A6%82%E4%BD%95%E5%85%B3%E9%97%AD+NVIDIA+G-Sync&form=ANNTH1&refig=65745bbdff1148e5ac684d1b2406a285&pc=CNNDDB) 。
 
 * 右键单击桌面，然后单击菜单中的 `Nvidia Control Panel` 。
+
 * 点击"显示"旁边的 `+` 。
+
 * 选择 `设置 G-SYNC` (不是所有显示器都有此选项)
+
 * 取消选中 `Enable G-SYNC` 旁边的框。
 
 ## 降低游戏FPS
 
 确保你使用 VTube Studio 玩的任何游戏都没有将帧速率设置为无限制。如果可能的话，尝试将游戏 FPS 限制为 60。你还可以尝试直接在 `Nvidia Control Panel` 中限制 FPS，如果游戏没有 FPS 设置，这也应该有效。
 
-[[img/img/fps_setting_nvidia_control_panel.png]]
+![NVIDIA控制面板FPS设置界面](img/img/fps_setting_nvidia_control_panel.png)
 
 ## 修复 GPU 驱动程序中的 FPS
 
 由于某些原因，有时 VTube Studio 中设置的 FPS 值会被忽略，导致其运行不受限。你可以在 GPU 驱动程序中设置固定的 FPS 值。如果你有 NVIDIA GPU，请右键单击桌面，然后单击菜单中的 `Nvidia 控制面板` 。你可以在那里为应用程序设置固定的 FPS 限制（请使用搜索引擎了解如何操作）。
-
 
 ## 检查 VTS "电源模式" 和渲染 GPU
 
@@ -83,13 +84,13 @@ NVIDIA G-Sync 可能会导致问题，尤其是在多显示器设置上。 [尝�
 
 另外，检查 `OpenGL rendering GPU` 设置。你可以选择运行 VTube Studio 的 GPU。某些笔记本电脑具有集成 GPU 和独立 GPU，你可能需要确保 VTS 在独立 GPU 上运行。
 
-[[img/img/nvidia_control_panel_1.png]]
+![NVIDIA控制面板3D设置界面](img/img/nvidia_control_panel_1.png)
 
 ## 关闭“GPU硬件加速”
 
 同时运行游戏和 VTube Studio 时，GPU硬件加速可能会导致问题。查看搜索引擎（或例如 [此页面](https://www.tenforums.com/tutorials/150440-turn-off-hardware-accelerated-gpu-scheduling-windows-10-a.html) ）以获取有关如何执行此操作的信息。
 
-[[img/img/gpu_scheduling_off.png]]
+![GPU硬件加速关闭设置界面](img/img/gpu_scheduling_off.png)
 
 ## 检查 VTube Studio 中的帧速率
 
@@ -140,7 +141,9 @@ https://help.steampowered.com/zh-cn/faqs/view/3978-072C-18DF-FBF9
 确保所有涉及的软件都是最新的。特别是以下内容:
 
 * 你的显卡驱动
+
 * OBS 或任何你使用的推流软件
+
 * Steam 上的 VTube Studio (确保你不在测试版分支上)
 
 ## 重启
@@ -156,15 +159,3 @@ https://help.steampowered.com/zh-cn/faqs/view/3978-072C-18DF-FBF9
 如果这些都没有帮助，请通过 VTube Studio Discord 进行询问。
 
 https://discord.gg/VTubeStudio
-
-
-
-
-
-
-
-
-
-
-
-

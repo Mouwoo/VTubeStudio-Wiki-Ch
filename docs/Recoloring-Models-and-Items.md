@@ -1,10 +1,9 @@
-
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
+![顶部提示图标](img/img/hint_top.png)
+![重点提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
 **_重要!!_**
 
 **只有在获得模型画师许可的情况下才能使用此功能。许多画师不希望他们的艺术作品以任何方式被修改或重新着色，并认为这是不礼貌的，所以请在使用此功能之前询问你的画师，并始终尊重他们的意愿!!**
-[[img/img/hint_bottom.png]]
+![底部提示图标](img/img/hint_bottom.png)
 
 ## 重新着色模型
 
@@ -12,11 +11,11 @@
 
 要重新着色当前加载模型的图形网格，请打开模型设置选项卡并单击 **"自定义模型"** 。然后，选择 **“为ArtMeshes自定义正片叠底/滤色颜色”** 。
 
-[[img/img/add_functionality_artmeshes_1.png|alt="Adding functionality to ArtMeshes"]]
+![ArtMesh功能添加界面](img/img/add_functionality_artmeshes_1.png)
 
 这将让你为每个图形网格设置正片叠底和屏幕覆盖色。这些颜色更改会与你的模型一起保存，并在你下次重新加载模型时加载
 
-[[img/img/live2d_item_recolor.png|alt="Recoloring your model ArtMeshes"]]
+![模型ArtMesh重新着色界面](img/img/live2d_item_recolor.png)
 
 ### 使模型的某些部分不可见
 
@@ -32,8 +31,4 @@
 
 你还可以使用空设置创建该类型的快捷键，以创建删除该模型当前加载的颜色预设的快捷键。
 
-[[img/img/live2d_item_recolor_hotkey.png]]
-
-
-
-
+![ArtMesh颜色预设快捷键设置界面](img/img/live2d_item_recolor_hotkey.png)

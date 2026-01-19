@@ -3,8 +3,11 @@
 如果你需要应用上的帮助，请在Discord上联系我们。
 
 * [Discord](https://discord.gg/vtubestudio)
+
 * [Twitter](https://twitter.com/VTubeStudio)
+
 * [邮箱](mailto:denchi@Denchisoft.com)
+
 * [官方网站](https://Denchisoft.com)
 
 ## 基础信息
@@ -13,29 +16,28 @@ VTube Studio是一款可用于 **[iPhone/iPad](https://apps.apple.com/us/app/vtu
 
 **VTUBE STUDIO仅支持LIVE2D模型。不支持VROID/VRM模型。[请使用 VSEEFACE 等其他应用程序。 你可以使用 VTUBE STUDIO 通过高质量 IOS 跟踪来控制 VSEEFACE 中的模型。](Sending-data-to-VSeeFace.md).**
 
-<br/>
+![基础VTS设置示意图](img/img/vts_basic_setup_new.png)
 
-[[img/img/vts_basic_setup_new.png|alt="Basic VTS Setup"]]
+![顶部提示图标](img/img/hint_top.png)
+![重点提示图标](img/img/bunny_point.png){: height="59px" width="189px"}
+单论追踪质量， **iOS > 网络摄像头 > Android**
 
-[[img/img/hint_top.png]]
-[[img/img/bunny_point.png|alt="Important Point!!"|height=59px|width=189px]]<br/>
-单论追踪质量， **iOS \> 网络摄像头 \> Android**
-
-[[img/img/hint_bottom.png]]
+![底部提示图标](img/img/hint_bottom.png)
 
 ## 在哪里下载？
 
 要运行VTube Studio，你需要下载手机端应用（Android或iOS）和/或Steam上的电脑端应用（Windows或macOS）。如果你仅想使用网络摄像头，则不必下载手机端应用。
 
-[[[img/img/download_steam.png|width=220px]]](https://store.steampowered.com/app/1325860/VTube_Studio/)
-[[[img/img/download_iphone.png|width=220px]]](https://apps.apple.com/us/app/vtube-studio/id1511435444)
-[[[img/img/download_android.png|width=220px]]](https://play.google.com/store/apps/details?id=com.denchi.vtubestudio)
+[![下载Steam版](img/img/download_steam.png){: height="" width="220px"}](https://store.steampowered.com/app/1325860/VTube_Studio/)
+[![下载iPhone版](img/img/download_iphone.png){: height="" width="220px"}](https://apps.apple.com/us/app/vtube-studio/id1511435444)
+[![下载Android版](img/img/download_android.png){: height="" width="220px"}](https://play.google.com/store/apps/details?id=com.denchi.vtubestudio)
 
 * **桌面端 (Steam)**
-  * Windows/macOS: https://store.steampowered.com/app/1325860/VTube_Studio/
+  Windows/macOS: https://store.steampowered.com/app/1325860/VTube_Studio/
+
 * **手机端**
-  * iOS: https://apps.apple.com/us/app/vtube-studio/id1511435444
-  * Android: https://play.google.com/store/apps/details?id=com.denchi.vtubestudio
+  iOS: https://apps.apple.com/us/app/vtube-studio/id1511435444
+  Android: https://play.google.com/store/apps/details?id=com.denchi.vtubestudio
 
 ## 有付费版本吗？为什么我该购买它？
 
@@ -46,16 +48,25 @@ VTube Studio是一款可用于 **[iPhone/iPad](https://apps.apple.com/us/app/vtu
 要运行VTube Studio，你需要一台PC（Windows 7及以上版本）或Mac（10.14 Mojave及以上版本）与一台支持VTube Studio手机端软件的手机/平板电脑。VTube Studio需要增强现实框架ARCore（由谷歌开发，在Android系统上运行）或ARKit（由苹果开发，在iOS系统上运行）。
 
 ### 受支持的设备：
+
 * **Android**
-  * 任何最新的 Android 设备都应该可以使用。较旧的设备可能不受支持。
+  任何最新的 Android 设备都应该可以使用。较旧的设备可能不受支持。
+
 * **iOS**
-  * 任何带有FaceID的iPhone或iPad。
-    * iPhone X, XR, XS（普通版和Max版）
-    * iPhone 11, 12 或更新版（普通版, Pro版和Pro Max版）
-    * iPad Pro (第三、四代以上)
-  * 同时支持：没有FaceID，但有苹果A12（或更新款）仿生芯片的设备。
-    * iPhone SE (第二代)
-    * iPad (第八代)
+
+  任何带有FaceID的iPhone或iPad。
+
+    iPhone X, XR, XS（普通版和Max版）
+
+    iPhone 11, 12 或更新版（普通版, Pro版和Pro Max版）
+
+    iPad Pro (第三、四代以上)
+
+  同时支持：没有FaceID，但有苹果A12（或更新款）仿生芯片的设备。
+
+    iPhone SE (第二代)
+
+    iPad (第八代)
 
 ## 支持设备（网络摄像头追踪）
 
