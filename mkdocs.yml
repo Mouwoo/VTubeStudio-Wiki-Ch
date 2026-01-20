@@ -84,7 +84,7 @@ nav:
     - Spout2 背景: Spout2-Background.md
     - 按键表情（贴纸/表情符号）: Expressions-(a.k.a.-Stickers-or-Emotes).md
     - 动画: Animations.md
-    - 动画、追踪、物理系统等之间的交互: Interaction-between-Animations,-Tracking,-Physics,-etc..md
+    - 动画、追踪、物理系统等之间的交互: Interaction-between-Animations-Tracking-Physics-etc.md
     - 谷歌 Mediapipe 面部追踪器: Mediapipe-Webcam-Tracker.md
     - NVIDIA Broadcast 面部追踪器: NVIDIA-Webcam-Tracker.md
     - Tobii 眼动追踪: Tobii-Eye-Tracker.md

@@ -72,5 +72,5 @@
 例外情况：按键表情中设置为**叠加**或**倍增**模式的参数，会始终同时生效。
 
 更多详情请参阅章节：
-[动画、按键表情、面部追踪、物理系统等之间的交互](Interaction-between-Animations%2C-Tracking%2C-Physics%2C-etc..md)
+[动画、按键表情、面部追踪、物理系统等之间的交互](Interaction-between-Animations-Tracking-Physics-etc.md)
 ![hint_bottom](img/img/hint_bottom.png)
